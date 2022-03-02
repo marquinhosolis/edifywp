@@ -39,7 +39,7 @@
 						src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=35"
 						alt="Avatar"
 					/>
-					<IoCaretDown />
+					<img src="<?php echo get_template_directory_uri(); ?>/images/caret-down.svg" alt="caret down">
 				</div>
 			</div>
 		</header>
