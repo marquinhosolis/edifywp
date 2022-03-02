@@ -30,7 +30,7 @@
             <div class="footerForm">
                 <strong>Inscreva-se</strong>
                 <input type="text" placeholder="Seu e-mail" />
-                <Button styleName="btn-default2">Inscreva-se</Button>
+                <Button class="btn btn-default2">Inscreva-se</Button>
             </div>
         </div>
     </div>
