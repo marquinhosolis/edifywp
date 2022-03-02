@@ -1,0 +1,129 @@
+footer {
+	display: block;
+	.container {
+		padding: 24px 15px;
+		border-top: solid 1px #dbdedf;
+		@media (min-width: 768px) {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-around;
+		}
+	}
+	strong {
+		display: inline-block;
+		margin-bottom: 12px;
+		font-family: Lato;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 24px;
+		letter-spacing: 0em;
+		text-align: left;
+	}
+	ul {
+		li {
+			transition: all linear 0.2s;
+			cursor: pointer;
+			&:hover {
+				color: $default;
+			}
+		}
+	}
+	.footerRegular {
+		margin-top: 80px;
+		.footerLogo {
+			max-width: 240px;
+			margin-bottom: 24px;
+			img {
+				margin-bottom: 12px;
+			}
+			p {
+				font-family: Lato;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 21px;
+				letter-spacing: 0em;
+				text-align: left;
+			}
+		}
+		.footerLinks {
+			max-width: 240px;
+			margin-bottom: 24px;
+			ul {
+				li {
+					margin-bottom: 12px;
+				}
+			}
+		}
+		.footerForm {
+			max-width: 240px;
+			display: flex;
+			flex-direction: column;
+			input {
+				padding: 6px 12px;
+				border: 1px solid #dbdedf;
+				margin-bottom: 12px;
+				border-radius: 2px;
+				font-family: Lato;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 20px;
+				letter-spacing: 0em;
+				text-align: left;
+			}
+		}
+	}
+	.footerLegal {
+		margin-bottom: 50px;
+		font-family: Lato;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 20px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #495055;
+		ul {
+			margin-top: 16px;
+			li {
+				padding: 4px 0;
+
+				@media (min-width: 1024px) {
+					padding: 4px 16px;
+					border-left: solid 1px #dbdedf;
+					&:first-child {
+						border: 0;
+					}
+				}
+			}
+			@media (min-width: 768px) {
+				margin-top: 0;
+			}
+			@media (min-width: 1024px) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+		p {
+			&:last-child {
+				margin-top: 16px;
+				font-family: Lato;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 20px;
+				letter-spacing: 0em;
+				text-align: left;
+				svg {
+					vertical-align: middle;
+				}
+				@media (min-width: 768px) {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
