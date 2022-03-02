@@ -20,6 +20,27 @@
 
 <body>
 	<header>
-		
-	</header>
+			<div class="container">
+				<div class="logoHeader">
+					<a href='<?php echo site_url(); ?>'>
+						<img src="<?php echo get_stylesheet_directory_uri()?>/images/logo.svg" alt="Reading.com logo" />
+					</a>
+				</div>
+				<nav>
+					<ul>
+						<li>
+							<a href="#meus-livros">Meus livros</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="avatarHeader">
+					<img
+						src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=35"
+						alt="Avatar"
+					/>
+					<IoCaretDown />
+				</div>
+			</div>
+		</header>
 	
