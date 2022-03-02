@@ -1,0 +1,22 @@
+@import './../variables';
+
+#home {
+	.container {
+		@media (min-width: 768px) {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+			gap: 28px;
+			align-items: flex-start;
+		}
+	}
+	.addBookButtonWrapper {
+		margin: 24px 0;
+		text-align: center;
+		@media (min-width: 768px) {
+			display: inline-block;
+		}
+	}
+}
+
+@import './../components/bookList.scss';

@@ -4,7 +4,7 @@ Template Name: New Book Page
 */
 ?>
 <?php get_header(); ?>
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/newBook-page.min.css">
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/pages/newBook-page.min.css">
 <main id="Novo">
     <div class="container">
         <div class="breadcrumbs">

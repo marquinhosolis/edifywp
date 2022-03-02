@@ -1,0 +1,62 @@
+@import './../variables';
+
+// BREADCRUMBS
+.breadcrumbs {
+	padding-top: 24px;
+	ul {
+		display: flex;
+		li {
+			font-family: Lato;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 18px;
+			letter-spacing: 0em;
+			text-align: left;
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+			&:after {
+				content: '>';
+				display: inline-block;
+				margin: 0 6px;
+			}
+			&:last-child {
+				color: #616b6d;
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.tituloPagina {
+	margin-top: 8px;
+	margin-bottom: 16px;
+	font-family: Lato;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 43px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #616b6d;
+}
+
+.inputBookWrapper {
+	@media (min-width: 768px) {
+		display: flex;
+		gap: 16px;
+	}
+}
+
+// SEARCH BOX
+@import './../components/searchBook.scss';
+
+// DROPDOWN BOOKS
+@import './../components/dropdownBooks.scss';
+
+// BOOK INPUT
+@import './../components/bookInput.scss';

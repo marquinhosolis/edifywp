@@ -4,7 +4,7 @@ Template Name: Home Page
 */
 ?>
 <?php get_header(); ?>
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/home-page.min.css">
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/pages/home-page.min.css">
 <main id="home">
 	<div class="container">
 		<div class="bookList">
