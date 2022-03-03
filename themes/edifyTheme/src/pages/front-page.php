@@ -3,6 +3,9 @@
 Template Name: Home Page
 */
 ?>
+<?php
+	$books = get_field('books', 34);
+?>
 <?php get_header(); ?>
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/pages/home-page.min.css">
 <main id="home">
@@ -13,7 +16,6 @@ Template Name: Home Page
 			</div>
 			<ul>
 				<?php 
-					$books = get_field('books', 34);
 					foreach ($books as $book) { ?>
 						<li>
 							<div class="bookCover">

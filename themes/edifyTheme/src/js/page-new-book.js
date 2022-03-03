@@ -13,7 +13,9 @@ $(document).ready(function () {
 					book.volumeInfo.authors +
 					'</p><p class="pageCount"><span>' +
 					book.volumeInfo.pageCount +
-					'</span> páginas</p></div></li>'
+					'</span> páginas</p> <p class="isbn">ISBN: <span>' +
+					book.volumeInfo.industryIdentifiers[0].identifier +
+					'</span></p></div></li>'
 			);
 		});
 	}
@@ -39,10 +41,10 @@ $(document).ready(function () {
 		selectedBook.title = $(this).find('.bookInfo h2').text();
 		selectedBook.author = $(this).find('.bookInfo p.author').text();
 		selectedBook.pageCount = $(this)
-			.find('.bookInfo p.pageCount span')
+			.find('.bookInfo .pageCount span')
 			.text();
 		selectedBook.cover = $(this).find('.bookCover img').attr('src');
-		selectedBook.isbn = $(this).find('.bookInfo p.isbn').text();
+		selectedBook.isbn = $(this).find('.bookInfo .isbn span').text();
 
 		localStorage.setItem('selectedBook', JSON.stringify(selectedBook));
 
@@ -56,11 +58,31 @@ $(document).ready(function () {
 
 	function populateBookInput() {
 		var selectedBook = JSON.parse(localStorage.getItem('selectedBook'));
+		$('#bookIsbnInput').val(selectedBook.isbn);
+
 		$('.apiInput .bookInfo h2').text(selectedBook.title);
+		$('#bookTitleInput').val(selectedBook.title);
+
 		$('.apiInput .authorName').text(selectedBook.author);
+		$('#bookAuthorInput').val(selectedBook.author);
+
 		$('.apiInput .pages').text(selectedBook.pageCount + ' páginas');
+		$('#bookPagesInput').val(selectedBook.pageCount);
+
 		$('.apiInput .bookCover img').attr('src', selectedBook.cover);
 	}
+
+	$('.starsSelect img').click(function () {
+		var starGray =
+			'http://localhost:8000/wp-content/themes/edifyTheme/src/images/star-gray.svg';
+		var starSelected =
+			'http://localhost:8000/wp-content/themes/edifyTheme/src/images/star.svg';
+		$('.starsSelect img').attr('src', starGray);
+		$(this).attr('src', starSelected);
+		$(this).prevAll().attr('src', starSelected);
+		var index = $(this).index() + 1;
+		$('.bookStarsInput').val(index);
+	});
 
 	$('.addManualButton').click(function () {
 		$('.apiInput').removeClass('bookInput--visible');
