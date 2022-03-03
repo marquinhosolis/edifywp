@@ -34,69 +34,12 @@ Template Name: New Book Page
                     <div class="dropdownBooks">
                         <ul>
                             <li>
-                                <div class="bookCover">
-                                    <div class="content">
-                                        <img
-                                            src='https://covers.openlibrary.org/b/isbn/8562936529-L.jpg'
-                                            alt='A guerra dos tronos'
-                                        />
-                                    </div>
-                                </div>
-                                <div class="bookInfo">
-                                    <h2>A guerra dos tronos</h2>
-                                    <p class="author">
-                                        George R. R. Martin, Jorge Candeiras
-                                    </p>
-                                    <p class="pageCount">
-                                        <span>710</span> páginas
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="bookCover">
-                                    <div class="content">
-                                        <img
-                                            src='https://covers.openlibrary.org/b/isbn/8562936529-L.jpg'
-                                            alt='A guerra dos tronos'
-                                        />
-                                    </div>
-                                </div>
-                                <div class="bookInfo">
-                                    <h2>A guerra dos tronos</h2>
-                                    <p class="author">
-                                        George R. R. Martin, Jorge Candeiras
-                                    </p>
-                                    <p class="pageCount">
-                                        <span>710</span> páginas
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="bookCover">
-                                    <div class="content">
-                                        <img
-                                            src='https://covers.openlibrary.org/b/isbn/8562936529-L.jpg'
-                                            alt='A guerra dos tronos'
-                                        />
-                                    </div>
-                                </div>
-                                <div class="bookInfo">
-                                    <h2>A guerra dos tronos</h2>
-                                    <p class="author">
-                                        George R. R. Martin, Jorge Candeiras
-                                    </p>
-                                    <p class="pageCount">
-                                        <span>710</span> páginas
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
                                 nenhum livro encontrado!
                             </li>
                         </ul>
                     </div>
                 </div>
-                <span onClick={props.handleClickManualInput()}>
+                <span>
                     <button class="btn btn-transparent addManualButton">
                         <img src="<?php echo get_template_directory_uri();?>/images/plus.svg" alt="plus icon">
                         Preencher manualmente
@@ -107,14 +50,14 @@ Template Name: New Book Page
                 <div class="bookInput apiInput">
                     <div class="bookCover">
                         <div class="content">
-                            <img src='https://covers.openlibrary.org/b/isbn/8562936529-L.jpg' alt='A guerra dos tronos' />
+                            <img src='' alt='book cover' />
                         </div>
                     </div>
                     <div class="bookInfo">
-                        <h2>A guerra dos tronos</h2>
+                        <h2></h2>
                         <p class="author">
-                            <span>George R. R. Martin, Jorge Candeiras </span>
-                            <span>710 páginas</span>
+                            <span class="authorName"></span>
+                            <span class="pages"></span>
                         </p>
                         <div class="inputWrapper">
                             <label htmlFor="">Comecei a ler:</label>
@@ -143,11 +86,6 @@ Template Name: New Book Page
                             ></textarea>
                         </div>
                         <div class="bookInputButtons">
-                            <span onClick={props.cancelInput()}>
-                                <button class="btn btn-transparent">
-                                    cancelar
-                                </button>
-                            </span>
                             <Button class="btn btn-default">
                                 Cadastrar
                             </Button>
@@ -199,11 +137,6 @@ Template Name: New Book Page
                             ></textarea>
                         </div>
                         <div class="bookInputButtons">
-                            <span>
-                                <button class="btn btn-transparent">
-                                    cancelar
-                                </button>
-                            </span>
                             <button class="btn btn-default">
                                 Cadastrar
                             </button>
@@ -215,3 +148,4 @@ Template Name: New Book Page
     </div>
 </main>
 <?php get_footer(); ?>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/page-new-book.js"></script>

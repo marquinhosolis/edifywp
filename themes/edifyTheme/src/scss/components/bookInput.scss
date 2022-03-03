@@ -1,6 +1,7 @@
 @import './../variables';
 
 .bookInput {
+	display: none;
 	padding-top: 16px;
 	.bookCover {
 		width: 150px;
@@ -114,8 +115,14 @@
 		}
 	}
 	@media (min-width: 768px) {
-		display: flex;
 		align-items: flex-start;
 		gap: 16px;
+	}
+}
+
+.bookInput--visible {
+	display: block;
+	@media (min-width: 768px) {
+		display: flex;
 	}
 }

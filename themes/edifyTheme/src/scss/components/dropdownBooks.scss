@@ -1,7 +1,7 @@
 @import './../variables';
 
 .dropdownBooks {
-	// display: none;
+	display: none;
 	width: 100%;
 	max-width: 495px;
 	max-height: 400px;
@@ -70,4 +70,8 @@
 			}
 		}
 	}
+}
+
+.dropdownBooks--visible {
+	display: block;
 }
